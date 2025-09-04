@@ -685,9 +685,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   {
 	  if (g_state != ST_RUN) return;
 
-	  if (soll_pulse_count > 0 && pulse_count >= soll_pulse_count-1){
-		  g_exit = EXIT_SOFT;
-	  }
+//	  if (soll_pulse_count != 0 && pulse_count >= soll_pulse_count-1){
+//		  g_exit = EXIT_SOFT;
+//	  }
+
 	  // Softstop behandeln
 	  if (g_exit == EXIT_SOFT) {
 		  // nur an Zyklusende aussteigen
